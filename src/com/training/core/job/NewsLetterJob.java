@@ -25,6 +25,7 @@ public class NewsLetterJob extends AbstractJobPerformable<CronJobModel> {
         SearchResult<NewsLetterModel> newsLetterResult = newsLetterDao.findLetterByFirstLetter();
 
         LOG.info("printing products start with 9");
+        LOG.info("testing gitStatus");
         newsLetterResult.getResult().stream().forEach(this::letterById);
         return new PerformResult(CronJobResult.SUCCESS, CronJobStatus.FINISHED);
     }
