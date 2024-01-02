@@ -1,0 +1,13 @@
+
+INSERT_UPDATE NewsLetter; newsletterID[unique = true]; title                  ; content                                                              ; published;
+                        ; 98965                      ; Travel Explorer        ; Get expert financial analysis, investment advice, and market updates ;                         ;
+                        ; 98765                      ; Financial Insights     ; Get expert financial analysis, investment advice, and market updates ;                         ;
+                        ; 12345                      ; Tech Trends Weekly     ; Explore the latest trends in technology,from java to Hyrbis          ;                         ;
+                        ; 83281                      ; Healthy Living Digest  ; Discover tips for a healthier lifestyle                              ; false                   ;
+                        ; 98888                      ; Ikigai                 ; Happy life                                                           ; true                        ;
+                        ; 97777                      ; Power of Money         ; Earning money for life                                               ; true                        ;
+                        ; 96666                      ; The Power of Attituted ; enhance self belief                                                  ; false                       ;
+                        ; 95544                      ; wings of fire          ; humble beginings in a small village                                  ; false                   ;
+
+INSERT_UPDATE OAuthClientDetails; clientId[unique = true]; resourceIds; scope ; authorizedGrantTypes        ; clientSecret; authorities
+                                ; mobile_android         ; hybris     ; basic ; password,client_credentials ; password    ; ROLE_TRUSTED_CLIENT

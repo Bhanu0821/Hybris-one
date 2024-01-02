@@ -1,0 +1,34 @@
+UPDATE GenericItem[processor = de.hybris.platform.commerceservices.impex.impl.ConfigPropertyImportProcessor]; pk[unique = true]
+
+$siteUid = electronics
+
+INSERT_UPDATE ServicelayerJob; code[unique = true]       ; springId[unique = true]
+                             ; customExportCronJobPerformable ; customExportJobPerformable
+
+INSERT_UPDATE CronJob; code[unique = true]           ; job(code)                 ; sessionLanguage(isocode); sessionCurrency(isocode);
+                     ; customExportCronJob ; customExportCronJobPerformable ; en                      ; EUR  ;
+
+#REMOVE CronJob; code[unique = true]           ; job(code)                 ; sessionLanguage(isocode); sessionCurrency(isocode);
+#                     ; customExportJobPerformable ; customExportJobPerformable ; en                      ; EUR  ;
+#
+
+INSERT_UPDATE ServicelayerJob; code[unique = true]       ; springId[unique = true]
+                             ; dailyOrderReportCronJobPerformable ; dailyOrderReportJobPerformable
+
+INSERT_UPDATE CronJob; code[unique = true]           ; job(code)                 ; sessionLanguage(isocode); sessionCurrency(isocode);
+                     ; orderReportCronJob ; dailyOrderReportCronJobPerformable ; en                      ; EUR  ;
+INSERT_UPDATE Trigger; cronjob(code)[unique = true]  ; active; cronExpression
+                     ; orderReportCronJob ; true  ; 0 0 13 * * ?
+
+
+INSERT_UPDATE Media;mediaFormat(qualifier);code[unique=true]@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator];mime[default='image/jpeg'];$catalogVersion;folder(qualifier)
+
+                   ;1200Wx1200H;/1200Wx1200H/2053367_2052.jpg;$siteResource/images/1200Wx1200H/2053367_2052.jpg;;;images
+                   ;1200Wx1200H;/1200Wx1200H/2053367_2331.jpg;$siteResource/images/1200Wx1200H/2053367_2331.jpg;;;images
+                   ;1200Wx1200H;/1200Wx1200H/2053367_7408.jpg;$siteResource/images/1200Wx1200H/2053367_7408.jpg;;;images
+                   ;1200Wx1200H;/1200Wx1200H/2053367_8524.jpg;$siteResource/images/1200Wx1200H/2053367_8524.jpg;;;images
+                   ;1200Wx1200H;/1200Wx1200H/2053367_9265.jpg;$siteResource/images/1200Wx1200H/2053367_9265.jpg;;;images
+
+
+
+

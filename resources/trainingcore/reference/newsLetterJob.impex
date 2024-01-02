@@ -1,0 +1,16 @@
+$siteUid = electronics
+
+INSERT_UPDATE ServicelayerJob; code[unique = true]       ; springId[unique = true]
+                             ; newsLetterCronJobPerformable ; newsLetterJob
+
+INSERT_UPDATE CronJob; code[unique = true]           ; job(code)                 ; sessionLanguage(isocode); sessionCurrency(isocode);
+                     ; newsLetterCronJob ; newsLetterCronJobPerformable ; en                      ; EUR  ;
+
+$siteUid = electronics
+
+INSERT_UPDATE ServicelayerJob; code[unique = true]       ; springId[unique = true]
+                             ; newsLetterJobPerformable ; newsLetterJobPerformable
+
+INSERT_UPDATE CronJob; code[unique = true]           ; job(code)                 ; sessionLanguage(isocode); sessionCurrency(isocode);
+                     ; newsLetterJob ; newsLetterJobPerformable ; en                      ; EUR  ;
+

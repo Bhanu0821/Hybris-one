@@ -1,0 +1,7 @@
+$lang=en
+INSERT_UPDATE TrainingMaterial;bookId[unique=true];bookName[lang=$lang];description;price;review;isExpired;author       ;courseType  ;duration;level
+                              ;B00022             ;The First Minute    ;           ;2000 ;      ;         ;Chris Fenning;Full Time   ;3 months;beginner
+                              ;B00024             ;Talk Like Ted       ;            ;3000 ;      ;         ;Carmine Gallo;Full Time   ;2 months;intermediate
+                              ;B00023             ;What every body is saying;      ;4000 ;      ;         ;Joe          ;Full Time   ;2 months;advanced
+
+

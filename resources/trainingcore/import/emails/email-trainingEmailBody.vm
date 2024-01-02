@@ -1,0 +1,32 @@
+## messageSource=classpath:/trainingcore/messages/email-trainingEmail.properties
+#macro(genHtmlLinkStartTag $url)
+<a href="$url"><font color="#666666">
+#end
+#macro(genHtmlLinkEndTag)
+</font></a>
+#end
+#macro(genHtmlLink $url $textColor $bodyContent)
+<a href="$url"><font color="$textColor">$bodyContent</font></a>
+#end
+
+<html>
+     <head>
+     </head>
+     <body bgcolor='#ffffff'>
+
+          Congratulations, ${ctx.displayName},
+
+     <div>
+
+     you are eligible for premium Membership.
+     So, your cart Order is Above 300,complete your order and get the premium Membership.
+
+     Regards
+     Training Storefront Website
+
+     </div>
+    </body.
+    </html>
+
+
+

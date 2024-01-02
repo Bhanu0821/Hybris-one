@@ -1,0 +1,21 @@
+[{
+  code: "111222",
+  name: "T - Shirt",
+  quantity:"100",
+  salesSpecialFlag:false,
+  EAN:"0000502385",
+  ProductConfigID:"3ae78239-e883-4de6-bb08-447e51d725f0",
+  version:"13",
+  unit:"EA",
+  delivaryModel:"ST"
+},
+  { code:"123123",
+    name:"Jeans shirt",
+    quantity:"100",
+    salesSpecialFlag:false,
+    EAN:"0000502385",
+    ProductConfigID:"3ae78239-e883-4de6-bb08-447e51d725f0",
+    version:"13",
+    unit:"EA",
+    delivaryModel:"ST"
+  }]

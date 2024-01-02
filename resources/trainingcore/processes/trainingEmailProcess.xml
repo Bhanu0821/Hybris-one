@@ -1,0 +1,26 @@
+
+<process xmlns="http://www.hybris.de/xsd/processdefinition" start="generateTrainingEmail" name="trainingEmailProcess"
+         processClass="com.training.core.model.TrainingEmailProcessModel" onError="error">
+
+    <action id="generateTrainingEmail" bean="generateTrainingEmail">
+        <transition name="OK" to="sendEmail"/>
+        <transition name="NOK" to="error"/>
+    </action>
+
+    <action id="sendEmail" bean="sendEmail">
+        <transition name="OK" to="removeSentEmail"/>
+        <transition name="NOK" to="failed"/>
+    </action>
+
+    <action id="removeSentEmail" bean="removeSentEmail">
+        <transition name="OK" to="success"/>
+        <transition name="NOK" to="error"/>
+    </action>
+
+    <end id="error" state="ERROR">Something went wrong.</end>
+    <end id="failed" state="FAILED">Could not send premium eligibility  email.</end>
+    <end id="success" state="SUCCEEDED">Sent premium eligibility email.</end>
+
+</process>
+
+
